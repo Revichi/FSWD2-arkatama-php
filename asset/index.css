@@ -1,0 +1,18 @@
+body{
+    background-color: aqua;
+}
+
+.bar{
+    border: solid black 1px;
+    background-color: azure;
+    margin-top: 5px;
+}
+.c1{
+    border: solid black 1px;
+}
+.c3{
+    background-color: aliceblue;
+}
+.c4{
+    margin:1px;
+}
