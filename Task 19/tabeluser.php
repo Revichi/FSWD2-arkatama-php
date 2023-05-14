@@ -1,6 +1,10 @@
 <?php
  $conn = mysqli_connect('127.0.0.1:3306','root','root','sinauo');
- 
+ session_start();
+ if (isset($_SESSION["USER"]) == ""){
+     header("Location:login.php");
+     die;
+ }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +18,10 @@
 </head>
 <body>
 <h1>Tabel User</h1>
+<p><b>USER : <?php echo $_SESSION["USER"]?></p>
+<a class="btn btn-danger" href="logout.php">Log Out</a>
+<br>
+<br>
 <table class="table">
     <form action="">
                 <a class="btn btn-info" href="input.php">Tambah User</a>
